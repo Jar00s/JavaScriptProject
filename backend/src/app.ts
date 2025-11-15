@@ -36,6 +36,19 @@ app.get('/api/health', (req: Request, res: Response) => {
     });
 });
 
+// Testowy POST endpoint (tymczasowy)
+app.post('/api/test', (req: Request, res: Response) => {
+    const data = req.body;
+
+    return res.status(201).json({
+        message: 'POST request received successfully',
+        received: data,
+    });
+});
+
+app.get('/api/error-test', (req: Request, res: Response) => {
+    throw new Error('Test error from /api/error-test');
+});
 /**
  * Tutaj będą routery modułów
  * Przykład (jak zrobimy moduł auth):

@@ -1,4 +1,3 @@
-
 import { PrismaClient, Prisma } from '../../generated/client'
 import { config } from '../config/env';
 
